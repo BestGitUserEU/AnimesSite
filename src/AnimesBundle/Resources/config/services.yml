@@ -1,0 +1,4 @@
+services:
+    animes_anime_service:
+       class: AnimesBundle\Service\AnimeService
+       arguments: ["@doctrine.orm.entity_manager"]

@@ -1,0 +1,8 @@
+animes:
+    resource: "@AnimesBundle/Controller/"
+    type:     annotation
+    prefix:   /animes
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

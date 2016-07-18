@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}MyAnimeSite{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('css/semantic.css') }}" />
+        {% endblock %}
+        <script src="{{ asset('javascript/semantic.css') }}"></script>
+        {% block javascripts %}
+
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+    {% block body %}
+        {% block header %}
+            <div class="ui horizontal menu">
+                <a class="item" href="{{ path("animes/calendrier") }}">
+                    Calendrier
+                </a>
+                <a class="item" href="{{ path("animes/ajouter") }}">
+                    Ajouter un Anime
+                </a>
+                <a class="item" href="{{ path("animes/liste") }}">
+                    Listes des animes
+                </a>
+                <div class="right menu">
+                    <a class="ui item" href="#">S'enregistrer </a>
+                </div>
+            </div>
+        {% endblock %}
+
+        <div class="ui container">
+            {% block main %}
+            {% endblock %}
+        </div>
+
+        {% block footer %}
+        {% endblock %}
+    {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,8 @@
+{% extends "AnimesBundle::layout.html.twig" %}
+
+{% block main %}
+    <h2 class="ui horizontal divider">Liste des animes</h2>
+    {% for anime in animes %}
+        <p>{{ anime.nom }}</p>
+    {% endfor %}
+{% endblock %}
